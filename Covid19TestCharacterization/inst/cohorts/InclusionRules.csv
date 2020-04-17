@@ -1,3 +1,5 @@
 "cohortName","ruleSequence","ruleName","cohortId"
-"COVID19-Test-Negative",0,"Without evidence for positive result for COVID-19-Test within 7 days",1773854
-"COVID19-Test-Positive",0,"COVID-19-Test-Positive within 7 days",1773851
+"COVID19-Test-Positive",0,"age >=18",568
+"COVID19-Test-Positive",1,"has >=365d of prior observation",568
+"COVID19-Tested",0,"age >=18",567
+"COVID19-Tested",1,"has >=365d of prior observation",567

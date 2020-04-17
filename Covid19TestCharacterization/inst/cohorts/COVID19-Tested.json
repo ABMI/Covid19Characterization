@@ -5,17 +5,38 @@
       {
         "Measurement": {
           "CodesetId": 1,
-          "First": true,
-          "OccurrenceStartDate": {
-            "Value": "2019-12-01",
-            "Op": "gte"
-          },
           "MeasurementTypeExclude": false
+        },
+        "Observation": {},
+        "ProcedureOccurrence": {}
+      },
+      {
+        "Measurement": {
+          "CodesetId": 2,
+          "MeasurementTypeExclude": false
+        },
+        "Observation": {},
+        "ProcedureOccurrence": {}
+      },
+      {
+        "Measurement": {},
+        "Observation": {
+          "CodesetId": 2,
+          "ObservationTypeExclude": false
+        },
+        "ProcedureOccurrence": {}
+      },
+      {
+        "Measurement": {},
+        "Observation": {},
+        "ProcedureOccurrence": {
+          "CodesetId": 2,
+          "ProcedureTypeExclude": false
         }
       }
     ],
     "ObservationWindow": {
-      "PriorDays": [365],
+      "PriorDays": [0],
       "PostDays": [0]
     },
     "PrimaryCriteriaLimit": {
@@ -23,31 +44,6 @@
     }
   },
   "ConceptSets": [
-    {
-      "id": 0,
-      "name": "COVID-19 (including asymptomatic)",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 37311061,
-              "CONCEPT_NAME": "Disease caused by severe acute respiratory syndrome coronavirus 2",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "840539006",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "SNOMED",
-              "CONCEPT_CLASS_ID": "Clinical Finding"
-            },
-            "isExcluded": false,
-            "includeDescendants": true,
-            "includeMapped": false
-          }
-        ]
-      }
-    },
     {
       "id": 1,
       "name": "COVID-19 specific testing (pre-coordinated Measurements) - Positive",
@@ -131,262 +127,80 @@
           }
         ]
       }
-    },
-    {
-      "id": 3,
-      "name": "COVID-19 source codes",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 710158,
-              "CONCEPT_NAME": "COVID-19 (machine translation)",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.100",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 710155,
-              "CONCEPT_NAME": "COVID-19 pneumonia (machine translation)",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.100x003",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 710156,
-              "CONCEPT_NAME": "COVID-19 pneumonia (machine translation)",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.100x001",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 710159,
-              "CONCEPT_NAME": "Confirmed COVID-19, excluding pneumonia (machine translation)",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.100x002",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 45542411,
-              "CONCEPT_NAME": "Contact with and (suspected) exposure to other viral communicable diseases",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "Z20.828",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CM",
-              "CONCEPT_CLASS_ID": "6-char billing code"
-            },
-            "isExcluded": true,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 710160,
-              "CONCEPT_NAME": "Emergency use of U07.1 | Disease caused by severe acute respiratory syndrome coronavirus 2",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.1",
-              "DOMAIN_ID": "Observation",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 45756093,
-              "CONCEPT_NAME": "Emergency use of U07.1 | Disease caused by severe acute respiratory syndrome coronavirus 2",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.1",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "ICD10",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 42501115,
-              "CONCEPT_NAME": "Emergency use of U07.1 | Disease caused by severe acute respiratory syndrome coronavirus 2",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U07.1",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "KCD7",
-              "CONCEPT_CLASS_ID": "KCD7 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 586414,
-              "CONCEPT_NAME": "Novel coronavirus infection",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U18.1",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "KCD7",
-              "CONCEPT_CLASS_ID": "KCD7 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 45600471,
-              "CONCEPT_NAME": "Other coronavirus as the cause of diseases classified elsewhere",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "B97.29",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "ICD10CM",
-              "CONCEPT_CLASS_ID": "5-char billing code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 586415,
-              "CONCEPT_NAME": "Provisional assignment of new diseases or emergency use",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "U18",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "KCD7",
-              "CONCEPT_CLASS_ID": "KCD7 code"
-            },
-            "isExcluded": false,
-            "includeDescendants": false,
-            "includeMapped": false
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": 710157,
-              "CONCEPT_NAME": "Suspected case of COVID-19 (machine translation)",
-              "STANDARD_CONCEPT": "N",
-              "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "Z03.800x001",
-              "DOMAIN_ID": "Condition",
-              "VOCABULARY_ID": "ICD10CN",
-              "CONCEPT_CLASS_ID": "ICD10 code"
-            },
-            "isExcluded": true,
-            "includeDescendants": false,
-            "includeMapped": false
-          }
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "name": "Measurement of severe acute respiratory syndrome coronavirus 2",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": 756055,
-              "CONCEPT_NAME": "Measurement of severe acute respiratory syndrome coronavirus 2",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_CODE": "OMOP4873969",
-              "DOMAIN_ID": "Measurement",
-              "VOCABULARY_ID": "OMOP Extension",
-              "CONCEPT_CLASS_ID": "Procedure"
-            },
-            "isExcluded": false,
-            "includeDescendants": true,
-            "includeMapped": false
-          }
-        ]
-      }
     }
   ],
   "QualifiedLimit": {
     "Type": ["All"]
   },
   "ExpressionLimit": {
-    "Type": ["All"]
+    "Type": ["First"]
   },
-  "InclusionRules": [],
-  "EndStrategy": {
-    "DateOffset": {
-      "DateField": ["StartDate"],
-      "Offset": [1]
+  "InclusionRules": [
+    {
+      "name": "age >=18",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [],
+        "DemographicCriteriaList": [
+          {
+            "Age": {
+              "Value": 18,
+              "Op": "gte"
+            }
+          }
+        ],
+        "Groups": []
+      }
+    },
+    {
+      "name": "has >=365d of prior observation",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "ObservationPeriod": {}
+            },
+            "StartWindow": {
+              "Start": {
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false,
+              "UseEventEnd": false
+            },
+            "EndWindow": {
+              "Start": {
+                "Days": 0,
+                "Coeff": -1
+              },
+              "End": {
+                "Coeff": 1
+              },
+              "UseIndexEnd": true,
+              "UseEventEnd": true
+            },
+            "RestrictVisit": false,
+            "IgnoreObservationPeriod": false,
+            "Occurrence": {
+              "Type": 2,
+              "Count": 1,
+              "IsDistinct": false
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
     }
-  },
+  ],
   "CensoringCriteria": [],
   "CollapseSettings": {
     "CollapseType": ["ERA"],
-    "EraPad": [90]
+    "EraPad": [0]
   },
   "CensorWindow": {}
 }

@@ -1,4 +1,3 @@
 atlasId,atlasName,cohortId,name
-1773850,COVID19-Test,1773850,COVID19-Tested
-1773851,COVID19-Test-Positive,1773851,COVID19-Test-Positive
-1773854,COVID19-Test-Negative,1773854,COVID19-Test-Negative
+567,Persons with a COVID-19 test age>=18 with prior observation,567,COVID19-Tested
+568,Persons with a COVID-19 test and positive result age>=18 and requiring prior observation,568,COVID19-Test-Positive

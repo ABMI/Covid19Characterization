@@ -26,7 +26,7 @@ shell("R CMD Rd2pdf ./ --output=extras/Covid19TestCharacterization.pdf")
 
 # Insert cohort definitions from ATLAS into package -----------------------
 ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "inst/settings/CohortsToCreate.csv",
-                                                 baseUrl = "http://api.ohdsi.org:80/WebAPI",
+                                                 baseUrl = "http://ohdsicovid19us.us-east-1.elasticbeanstalk.com/WebAPI",
                                                  insertTableSql = TRUE,
                                                  insertCohortCreationR = TRUE,
                                                  generateStats = TRUE,

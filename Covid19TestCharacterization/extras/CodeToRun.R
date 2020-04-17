@@ -70,11 +70,19 @@ CohortDiagnostics::preMergeDiagnosticsFiles(file.path(outputFolder, "diagnostics
 # Use this to view the results. Multiple zip files can be in the same folder. If the files were pre-merged, this is automatically detected: 
 CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnosticsExport"))
 
+# To generate additional tables.
+additionalTable1(connectionDetails = connectionDetails,
+                 cdmDatabaseSchema = cdmDatabaseSchema,
+                 cohortDatabaseSchema = cohortDatabaseSchema,
+                 cohortTable = cohortTable,
+                 oracleTempSchema = oracleTempSchema,
+                 outputFolder = outputFolder,
+                 databaseId = databaseId,
+                 minCellCount = 10)
 
 # To explore a specific cohort in the local database, viewing patient profiles:
 CohortDiagnostics::launchCohortExplorer(connectionDetails = connectionDetails,
                                         cdmDatabaseSchema = cdmDatabaseSchema,
                                         cohortDatabaseSchema = cohortDatabaseSchema,
                                         cohortTable = cohortTable,
-                                        cohortId = 123)
-# Where 123 is the ID of the cohort you wish to inspect.
+                                        cohortId = 567)
