@@ -3,18 +3,18 @@ Characteristics and outcomes of individuals tested for SARS-CoV-2
 
 <img src="https://img.shields.io/badge/Study%20Status-Design%20Finalized-brightgreen.svg" alt="Study Status: Design Finalized">
 
-  - Analytics use case(s): **Characterization**
-  - Study type: **Clinical Application**
-  - Tags: **OHDSI, Study-a-thon, COVID-19**
-  - Study lead: **Asieh Golozar, Seng Chan You**
-  - Study lead forums tag: **[SCYou](https://forums.ohdsi.org/u/SCYou)**
-  - Study start date: **April 4, 2020**
-  - Study end date:
-  - Protocol: **[Google Doc](https://drive.google.com/drive/folders/1sSrKmNjLAaStWyfZjUlzY97HxcTqrMNW)**
-  - Publications:
-  - Results explorer:
+- Analytics use case(s): **Characterization**
+- Study type: **Clinical Application**
+- Tags: **OHDSI, Study-a-thon, COVID-19**
+- Study lead: **Asieh Golozar, Seng Chan You**
+- Study lead forums tag: **[SCYou](https://forums.ohdsi.org/u/SCYou)**
+- Study start date: **April 4, 2020**
+- Study end date:
+- Protocol: **[Google Doc](https://drive.google.com/drive/folders/1sSrKmNjLAaStWyfZjUlzY97HxcTqrMNW)**
+- Publications:
+- Results explorer:
 
-  This study aims to describe the baseline and clinical characteristics of individuals at the time of  SARS-CoV-2 test administration and separately for individuals with positive SARS-CoV-2 tests.
+This study aims to describe the baseline and clinical characteristics of individuals at the time of  SARS-CoV-2 test administration and separately for individuals with positive SARS-CoV-2 tests.
 
 Requirements
 ============
